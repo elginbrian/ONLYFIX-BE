@@ -1,0 +1,22 @@
+INSERT INTO reviews (review_id, order_id, technician_id, customer_id, rating, comment, review_date) VALUES 
+('83927641', 10001, 41, 21, 5, 'Pekerjaan sangat cepat dan hasil memuaskan. Terima kasih!', '2024-12-01'),
+('72910583', 10002, 42, 22, 4, 'Tukang pipa yang sangat profesional dan terampil.', '2024-12-02'),
+('31529764', 10003, 43, 23, 5, 'Pekerjaan bangunan sangat baik, saya sangat puas dengan hasilnya.', '2024-12-03'),
+('48193075', 10004, 44, 24, 3, 'Pekerjaan sedikit terlambat, namun hasilnya baik.', '2024-12-04'),
+('24681057', 10005, 45, 25, 5, 'Tukang listrik yang sangat kompeten, pekerjaan selesai tepat waktu.', '2024-12-05'),
+('53127480', 10006, 46, 26, 4, 'Pipa terpasang dengan baik, tapi ada sedikit masalah dengan tekanan air.', '2024-12-06'),
+('97541368', 10007, 47, 27, 5, 'Pekerjaan bangunan sangat detail dan sesuai harapan.', '2024-12-07'),
+('25813940', 10008, 48, 28, 4, 'Tukang kayu yang baik, tetapi sedikit lambat dalam menyelesaikan pekerjaan.', '2024-12-08'),
+('60234781', 10009, 41, 29, 5, 'Pekerjaan listrik cepat dan rapi, sangat memuaskan!', '2024-12-09'),
+('81756392', 10010, 42, 30, 4, 'Tukang pipa yang baik, tapi ada sedikit kekurangan dalam kualitas bahan.', '2024-12-10'),
+('64902718', 10011, 43, 31, 5, 'Renovasi rumah sangat memuaskan, pekerjaannya sangat rapih.', '2024-12-11'),
+('98471056', 10012, 44, 32, 4, 'Meja dan kursi kayu sangat baik, hanya saja sedikit lebih lama dari yang diharapkan.', '2024-12-12'),
+('18769034', 10013, 45, 33, 5, 'Tukang listrik ini sangat berkompeten, hasil pekerjaan sangat memuaskan.', '2024-12-13'),
+('70234815', 10014, 46, 34, 4, 'Pipa terpasang dengan baik, namun harus ada sedikit penyesuaian.', '2024-12-14'),
+('51648327', 10015, 47, 35, 5, 'Bangunan yang dibangun sangat kokoh dan sesuai dengan desain.', '2024-12-15'),
+('26450739', 10016, 48, 36, 4, 'Hasil pekerjaan kayu sangat baik, tapi sedikit terlambat.', '2024-12-16'),
+('41283695', 10017, 41, 21, 5, 'Instalasi listrik selesai dengan sangat baik, sangat direkomendasikan!', '2024-12-17'),
+('65372840', 10018, 42, 22, 4, 'Instalasi pipa cukup baik, sedikit kurang dalam hal kerapian.', '2024-12-18'),
+('84916073', 10019, 43, 23, 5, 'Bangunan yang dibangun sangat solid dan sesuai dengan ekspektasi.', '2024-12-19'),
+('94021865', 10020, 44, 24, 5, 'Pekerjaan kayu sangat detail, hasilnya luar biasa!', '2024-12-20');
+

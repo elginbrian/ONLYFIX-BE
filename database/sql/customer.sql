@@ -1,0 +1,17 @@
+INSERT INTO customers (user_id, phone_num, address, city) VALUES 
+(12345678, '081234567890', 'Jl. Raya Merdeka No.1', 'Jakarta'),
+(23456789, '081234567891', 'Jl. Pahlawan No.2', 'Bandung'),
+(67890123, '081234567892', 'Jl. Mawar No.3', 'Surabaya'),
+(78901234, '081234567893', 'Jl. Kenanga No.4', 'Medan'),
+(22345679, '081234567894', 'Jl. Cendana No.5', 'Yogyakarta'),
+(33456780, '081234567895', 'Jl. Bunga No.6', 'Semarang'),
+(77890124, '081234567896', 'Jl. Kamboja No.7', 'Makassar'),
+(88901235, '081234567897', 'Jl. Melati No.8', 'Denpasar'),
+(34567890, '081234567898', 'Jl. Pahlawan No.9', 'Palembang'),
+(45678901, '081234567899', 'Jl. Senang No.10', 'Surakarta'),
+(89012345, '081234567900', 'Jl. Gading No.11', 'Pontianak'),
+(90123456, '081234567901', 'Jl. Gemilang No.12', 'Batam'),
+(77890124, '081234567902', 'Jl. Pantai No.13', 'Bali'),
+(88901235, '081234567903', 'Jl. Indah No.14', 'Cirebon'),
+(99012346, '081234567904', 'Jl. Lestari No.15', 'Jakarta'),
+(10123457, '081234567905', 'Jl. Indah No.16', 'Bengkulu');
