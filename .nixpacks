@@ -1,0 +1,18 @@
+setup:
+  # Specify PHP, Composer, and other necessary dependencies
+  php.withExtensions (pe: pe.enabled ++ [ "pdo_mysql", "gd", "zip" ])
+  nginx
+  libmysqlclient
+  phpPackages.composer
+
+install:
+  # Install Composer dependencies
+  composer install --no-dev --optimize-autoloader --prefer-dist
+
+build:
+  # Skipping npm run build as we don't have a frontend
+  echo "No frontend build required"
+
+start:
+  # Run database migrations and then start PHP-FPM and Nginx
+  php artisan migrate --force && php-fpm -y /assets/php-fpm.conf & nginx -c /nginx.conf
