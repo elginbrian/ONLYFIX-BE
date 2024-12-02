@@ -1,4 +1,4 @@
-# ONLYFIX by Team 3 PAW TI-C
+# ONLYFIX
 
 OnlyFix adalah platform digital yang menghubungkan pemilik rumah dengan teknisi profesional di seluruh Indonesia. Kami hadir untuk memudahkan pengguna menemukan tenaga ahli berkualitas dalam berbagai bidang, mulai dari perbaikan listrik, pipa ledeng, perawatan peralatan rumah tangga, hingga renovasi. OnlyFix memberikan akses mudah dan terpercaya ke layanan teknisi yang terverifikasi, sehingga Anda dapat memastikan perbaikan dilakukan dengan aman, efisien, dan transparan.
 
