@@ -9,10 +9,15 @@ install:
   # Install Composer dependencies
   composer install --no-dev --optimize-autoloader --prefer-dist
 
+  # Ensure necessary directories and configurations are in place
+  mkdir -p /var/log/nginx /var/cache/nginx /assets
+  cp /app/nginx.conf /assets/nginx.conf   # Ensure nginx.conf is copied
+
 build:
   # Skipping npm run build as we don't have a frontend
   echo "No frontend build required"
 
 start:
   # Run database migrations and then start PHP-FPM and Nginx
-  php artisan migrate --force && php-fpm -y /assets/php-fpm.conf & nginx -c /nginx.conf
+  php artisan migrate --force
+  php-fpm -y /assets/php-fpm.conf & nginx -c /assets/nginx.conf
