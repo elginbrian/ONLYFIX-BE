@@ -37,6 +37,9 @@ php artisan view:cache
 # Run any database migrations
 php artisan migrate --force
 
+# Start Octane (add this line if you're using Laravel Octane with RoadRunner)
+php artisan octane:start --host=0.0.0.0 --port=$PORT --server=roadrunner --workers=auto --no-interaction --watch
+
 # Check if the environment variable is set to "false" or not set at all
 if [[ "${!ENV_VAR_NAME}" = "false" ]] || [[ -z "${!ENV_VAR_NAME}" ]]; then
   echo "Exiting maintenance mode..."
