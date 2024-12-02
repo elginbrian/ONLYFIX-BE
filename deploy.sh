@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 # Make sure this file has executable permissions, run `chmod +x deploy.sh` to ensure it does
 
@@ -10,6 +10,17 @@ if [[ "${!ENV_VAR_NAME}" = "true" ]]; then
   echo "Entering maintenance mode..."
   php artisan down
 fi
+
+# Install Laravel Octane if not installed (Ensure it's in composer.json)
+echo "Installing Laravel Octane..."
+composer require laravel/octane
+
+# Install RoadRunner if not installed
+echo "Installing RoadRunner..."
+composer require spiral/roadrunner
+
+# Install the RoadRunner binary
+php artisan octane:install roadrunner
 
 # Build assets using NPM
 npm run build
