@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\File;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TechnicianController;
 use App\Http\Controllers\CustomerController;
@@ -11,7 +12,8 @@ use App\Http\Controllers\ReviewController;
 
 Route::middleware(['api'])->group(function () {
     Route::get('/', function () {
-        return response('Welcome to OnlyFix BE by Elgin Brian.');
+        return response(File::get(resource_path('index.html')))
+            ->header('Content-Type', 'text/html');
     });
 
     Route::resource('users', UserController::class);
