@@ -1,4 +1,4 @@
-# Use official PHP image with necessary extensions
+# Use official PHP image with necessary extensions 
 FROM php:8.2-fpm
 
 # Install system dependencies for Laravel
@@ -26,6 +26,9 @@ RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/lo
 
 # Install Laravel dependencies using Composer
 RUN composer install --no-dev --optimize-autoloader --prefer-dist
+
+# Run Laravel migrations
+RUN php artisan migrate --force
 
 # Expose port 9000 to run PHP-FPM
 EXPOSE 9000
