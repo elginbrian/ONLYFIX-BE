@@ -12,8 +12,16 @@ use App\Http\Controllers\ReviewController;
 
 Route::middleware(['api'])->group(function () {
     Route::get('/', function () {
-        return response(File::get(resource_path('index.html')))
-            ->header('Content-Type', 'text/html');
+        return response()->json([
+            'message' => 'Welcome to OnlyFix BE',
+            'teamMembers' => [
+                ['name' => 'Muhammad Zaidan Azizi', 'role' => 'PM'],
+                ['name' => 'Muhammad Tony Putra', 'role' => 'UI/UX'],
+                ['name' => 'Dimas Rezananda', 'role' => 'FE'],
+                ['name' => 'Edgar Davin Danuarta', 'role' => 'FE'],
+                ['name' => 'Elgin Brian Wahyu Bramadhika', 'role' => 'BE'],
+            ],
+        ]);
     });
 
     Route::resource('users', UserController::class);
