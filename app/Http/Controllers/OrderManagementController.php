@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Order;
 use App\Models\OrderAttachment;
 use App\Models\Review;
@@ -13,12 +12,6 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class OrderManagementController extends Controller
 {
-    /**
-     * Show all orders with optional filtering by customer or technician.
-     *
-     * @param  Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function index(Request $request)
     {
         try {
@@ -45,12 +38,6 @@ class OrderManagementController extends Controller
         }
     }
 
-    /**
-     * Show details of a specific order with its attachments and reviews.
-     *
-     * @param  int  $order_id
-     * @return \Illuminate\Http\Response
-     */
     public function show($order_id)
     {
         try {
@@ -67,12 +54,6 @@ class OrderManagementController extends Controller
         }
     }
 
-    /**
-     * Create a new order.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -98,13 +79,6 @@ class OrderManagementController extends Controller
         }
     }
 
-    /**
-     * Update the details of an order.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $order_id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $order_id)
     {
         $validated = $request->validate([
@@ -133,12 +107,6 @@ class OrderManagementController extends Controller
         }
     }
 
-    /**
-     * Delete an order.
-     *
-     * @param  int  $order_id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($order_id)
     {
         try {
@@ -160,13 +128,6 @@ class OrderManagementController extends Controller
         }
     }
 
-    /**
-     * Add an attachment to an order.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $order_id
-     * @return \Illuminate\Http\Response
-     */
     public function addAttachment(Request $request, $order_id)
     {
         $validated = $request->validate([
@@ -195,13 +156,6 @@ class OrderManagementController extends Controller
         }
     }
 
-    /**
-     * Add a review to an order.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $order_id
-     * @return \Illuminate\Http\Response
-     */
     public function addReview(Request $request, $order_id)
     {
         $validated = $request->validate([

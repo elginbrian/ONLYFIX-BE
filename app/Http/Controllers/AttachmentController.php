@@ -13,12 +13,6 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class AttachmentController extends Controller
 {
-    /**
-     * Get all attachments for a specific user.
-     *
-     * @param  int  $user_id
-     * @return \Illuminate\Http\Response
-     */
     public function getUserAttachments($user_id)
     {
         try {
@@ -36,12 +30,6 @@ class AttachmentController extends Controller
         }
     }
 
-    /**
-     * Get all attachments for a specific order.
-     *
-     * @param  int  $order_id
-     * @return \Illuminate\Http\Response
-     */
     public function getOrderAttachments($order_id)
     {
         try {
@@ -59,13 +47,6 @@ class AttachmentController extends Controller
         }
     }
 
-    /**
-     * Store an attachment for a user.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $user_id
-     * @return \Illuminate\Http\Response
-     */
     public function storeUserAttachment(Request $request, $user_id)
     {
         $validated = $request->validate([
@@ -99,13 +80,6 @@ class AttachmentController extends Controller
         }
     }
 
-    /**
-     * Store an attachment for an order.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $order_id
-     * @return \Illuminate\Http\Response
-     */
     public function storeOrderAttachment(Request $request, $order_id)
     {
         $validated = $request->validate([

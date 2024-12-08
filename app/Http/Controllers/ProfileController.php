@@ -11,12 +11,6 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ProfileController extends Controller
 {
-    /**
-     * Show the profile of a user, including their technician and customer details.
-     *
-     * @param  int  $user_id
-     * @return \Illuminate\Http\Response
-     */
     public function show($user_id)
     {
         try {
@@ -24,8 +18,6 @@ class ProfileController extends Controller
             
             $profileData = [
                 'user' => $user,
-                'technician' => $user->technician ? $user->technician : null,
-                'customer' => $user->customer ? $user->customer : null,
             ];
 
             return response()->json([
@@ -39,13 +31,6 @@ class ProfileController extends Controller
         }
     }
 
-    /**
-     * Update the profile of a user, including their technician and customer details.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $user_id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $user_id)
     {
         try {
