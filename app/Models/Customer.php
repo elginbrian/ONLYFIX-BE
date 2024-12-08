@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Models;
 
@@ -10,6 +10,15 @@ class Customer extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'customer_id';
+    public $incrementing = true;
+    protected $keyType = 'int';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'phone_num',
         'address',

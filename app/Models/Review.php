@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Models;
 
@@ -10,6 +10,9 @@ class Review extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'review_id';
+    public $incrementing = true;
+    protected $keyType = 'int';
     protected $fillable = [
         'order_id',
         'technician_id',
@@ -17,6 +20,15 @@ class Review extends Model
         'rating',
         'comment',
         'review_date',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'review_date' => 'datetime', 
     ];
 
     /**
@@ -32,7 +44,7 @@ class Review extends Model
      */
     public function customer(): BelongsTo
     {
-        return $this->belongsTo(Customer::class, 'customer_id', 'user_id');
+        return $this->belongsTo(Customer::class, 'customer_id', 'customer_id'); 
     }
 
     /**
@@ -40,6 +52,6 @@ class Review extends Model
      */
     public function technician(): BelongsTo
     {
-        return $this->belongsTo(Technician::class, 'technician_id', 'user_id');
+        return $this->belongsTo(Technician::class, 'technician_id', 'technician_id');
     }
 }

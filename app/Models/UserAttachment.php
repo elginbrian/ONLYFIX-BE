@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Models;
 
@@ -10,9 +10,27 @@ class UserAttachment extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'attachment_id';
+    public $incrementing = true;
+    protected $keyType = 'int';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'file_url',
         'uploaded_at',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'uploaded_at' => 'datetime', 
     ];
 
     /**
