@@ -11,9 +11,9 @@ class UserController extends Controller
         return User::all();
     }
 
-    public function show($id)
+    public function show($user_id)
     {
-        return User::findOrFail($id);
+        return User::findOrFail($user_id);
     }
 
     public function store(Request $request)
@@ -28,16 +28,16 @@ class UserController extends Controller
         return response()->json($user, 201);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id)
     {
-        $user = User::findOrFail($id);
+        $user = User::findOrFail($user_id);
         $user->update($request->all());
         return response()->json($user, 200);
     }
 
-    public function destroy($id)
+    public function destroy($user_id)
     {
-        User::destroy($id);
+        User::destroy($user_id);
         return response()->json(null, 204);
     }
 }
