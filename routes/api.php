@@ -10,7 +10,8 @@ use App\Http\Controllers\OrderAttachmentController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ProfileController; 
 use App\Http\Controllers\OrderManagementController; 
-use App\Http\Controllers\AttachmentController; 
+use App\Http\Controllers\AttachmentController;
+use App\Http\Controllers\AuthController;
 
 Route::middleware(['api'])->group(function () {
     Route::get('/', function () {
@@ -26,6 +27,12 @@ Route::middleware(['api'])->group(function () {
         ]);
     });
 
+    // Auth routes
+    Route::post('register', [AuthController::class, 'register']);
+    Route::post('login', [AuthController::class, 'login']);
+    Route::post('logout', [AuthController::class, 'logout'])->middleware('auth');
+    Route::get('current-user', [AuthController::class, 'currentUser'])->middleware('auth');
+    
     // User routes
     Route::resource('users', UserController::class);
     Route::resource('technicians', TechnicianController::class);
