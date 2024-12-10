@@ -32,6 +32,11 @@ Route::middleware(['api'])->group(function () {
     Route::post('login', [AuthController::class, 'login']);
     Route::post('logout', [AuthController::class, 'logout'])->middleware('auth');
     Route::get('current-user', [AuthController::class, 'currentUser'])->middleware('auth');
+    Route::get('/csrf-token', function () {
+        return response()->json([
+            'csrfToken' => csrf_token(),
+        ]);
+    });
     
     // User routes
     Route::resource('users', UserController::class);
