@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Http;
 
@@ -18,18 +18,18 @@ class Kernel extends HttpKernel
      * The application's route middleware groups.
      */
     protected $middlewareGroups = [
-        \App\Http\Middleware\OwnCors::class,
-        
         'web' => [
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            // \App\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \App\Http\Middleware\DisableCsrfMiddleware::class,
         ],
     ];
 
