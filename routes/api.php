@@ -14,6 +14,10 @@ use App\Http\Controllers\{
     AttachmentController
 };
 
+Route::get('/', function () {
+    return redirect('/api/v1');
+});
+
 Route::prefix('api/v1')->middleware(['api'])->group(function () {
     Route::get('/', function () {
         return response()->json([
