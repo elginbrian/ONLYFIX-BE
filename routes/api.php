@@ -36,8 +36,8 @@ Route::prefix('api/v1')->middleware(['api'])->group(function () {
     Route::controller(AuthController::class)->group(function () {
         Route::post('register', 'register')->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);;
         Route::post('login', 'login')->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);;
-        Route::post('logout', 'logout')->middleware('auth:api');
-        Route::get('current-user', 'currentUser')->middleware('auth:api');
+        Route::post('logout', 'logout')->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);
+        Route::get('current-user', 'currentUser')->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);
     });
 
     // User Routes
