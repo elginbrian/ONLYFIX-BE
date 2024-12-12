@@ -26,7 +26,7 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
-        'account_type',  // Added account type for mass assignment
+        'account_type', 
     ];
 
     /**
@@ -37,6 +37,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'api_token',
+        'email_verified_at',
     ];
 
     /**
