@@ -24,4 +24,4 @@ OnlyFix adalah platform digital yang menghubungkan pemilik rumah dengan teknisi 
 `https://onlyfix.up.railway.app/`
 
 ## Back-end API Base URL
-`https://onlyfix-be.up.railway.app/`
+`https://onlyfix-be.up.railway.app/api/v1`
