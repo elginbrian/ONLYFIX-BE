@@ -21,7 +21,7 @@ OnlyFix adalah platform digital yang menghubungkan pemilik rumah dengan teknisi 
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=elginbrian&repo=ONLYFIX-BE&theme=radical)](https://github.com/elginbrian/ONLYFIX-BE)
 
 ## Front-end URL
-`https://onlyfix.up.railway.app/`
+`https://onlyfix.elginbrian.com/`
 
 ## Back-end API Base URL
-`https://onlyfix-be.up.railway.app/api/v1`
+`https://onlyfix-backend.elginbrian.com/api/v1`
